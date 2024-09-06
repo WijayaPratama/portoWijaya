@@ -1,0 +1,17 @@
+*,
+html {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.jumbotron {
+  background-color: #e2edff;
+}
+
+img {
+  margin-top: 5rem;
+}
+
+#project {
+  background-color: #e2edff;
+}
