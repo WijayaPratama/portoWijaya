@@ -109,6 +109,24 @@ const projects = [
       "A modern and premium cafe landing page for Bento Kopi Telkom Bandung built with Next.js. It features a responsive layout, animated hero section, interactive food and drink menu with search, category filtering, pagination, gallery lightbox, Google Maps location section, WhatsApp contact button, SEO metadata, and smooth transitions using Framer Motion.",
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
   },
+  {
+    title: "Administrative Document Automation System",
+    category: "Data Engineer",
+    liveUrl: "https://huggingface.co/spaces/Wijaya14/Implementasi-BKI",
+    githubUrl:
+      "https://huggingface.co/spaces/Wijaya14/Implementasi-BKI/tree/main",
+    description:
+      "Develop a web-based administration application to automate the creation of Debit Note, RAB, and Invoice documents in one system.",
+    stack: [
+      "Python",
+      "Gradio",
+      "OpenPyXL",
+      "Python-docx",
+      "Pandas",
+      "MongoDB",
+      "HuggingFace",
+    ],
+  },
 ];
 
 const skills = [
@@ -136,7 +154,7 @@ const skills = [
 
 const achievements = [
   {
-    title: "Juara 1 SAUVC Singapore",
+    title: "Juara 1 SAUVC China",
     subtitle: "International Competition · 2026",
     icon: Trophy,
   },
@@ -313,15 +331,15 @@ export default function Home() {
             className="mt-10 grid max-w-2xl grid-cols-3 gap-4"
           >
             <div>
-              <p className="text-3xl font-black">3.73</p>
+              <p className="text-3xl font-black">3.76</p>
               <p className="text-sm text-slate-400">GPA / 4.00</p>
             </div>
             <div>
-              <p className="text-3xl font-black">7+</p>
+              <p className="text-3xl font-black">7</p>
               <p className="text-sm text-slate-400">Achievements</p>
             </div>
             <div>
-              <p className="text-3xl font-black">3+</p>
+              <p className="text-3xl font-black">6</p>
               <p className="text-sm text-slate-400">Project Focus</p>
             </div>
           </motion.div>
