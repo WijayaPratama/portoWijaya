@@ -229,7 +229,6 @@ export default function Home() {
           ease: "easeInOut",
         }}
       />
-
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute right-[-8rem] top-96 h-80 w-80 rounded-full bg-violet-500/20 blur-3xl"
@@ -244,7 +243,6 @@ export default function Home() {
           ease: "easeInOut",
         }}
       />
-
       {/* Navbar */}
       <nav className="fixed left-0 top-0 z-50 w-full border-b border-slate-800/70 bg-slate-950/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
@@ -278,7 +276,6 @@ export default function Home() {
           </a>
         </div>
       </nav>
-
       {/* Hero */}
       <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-20 pt-32 md:grid-cols-[1.2fr_0.8fr] md:pt-36">
         <motion.div variants={stagger} initial="hidden" animate="show">
@@ -381,7 +378,6 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-
       {/* About Me */}
       <section id="about" className="mx-auto max-w-7xl px-6 py-20">
         <motion.div
@@ -427,87 +423,108 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-
-      {/* Projects */}
-      <section id="projects" className="mx-auto max-w-7xl px-6 py-20">
+      {/* Projects */}{" "}
+      <section
+        id="projects"
+        className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 sm:py-20"
+      >
+        {" "}
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
-          <motion.div variants={fadeUp} className="mb-10">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">
-              Featured Work
-            </p>
-            <h2 className="text-4xl font-black tracking-tight md:text-5xl">
-              My Projects
-            </h2>
-            <p className="mt-4 max-w-2xl text-slate-300">
+          {" "}
+          <motion.div variants={fadeUp} className="mb-8 sm:mb-10">
+            {" "}
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-sky-400 sm:text-sm sm:tracking-[0.3em]">
+              {" "}
+              Featured Work{" "}
+            </p>{" "}
+            <h2 className="text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
+              {" "}
+              My Projects{" "}
+            </h2>{" "}
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300 sm:mt-4 sm:text-base sm:leading-7">
+              {" "}
               Project untuk menunjukkan kemampuan full-stack, data analytics,
-              dan integrasi machine learning ke dalam web app.
-            </p>
-          </motion.div>
-
-          <div className="grid gap-6 md:grid-cols-3">
+              dan integrasi machine learning ke dalam web app.{" "}
+            </p>{" "}
+          </motion.div>{" "}
+          {/* Project Grid */}{" "}
+          <div className="grid w-full grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {" "}
             {projects.map((project) => (
               <motion.article
                 key={project.title}
                 variants={fadeUp}
-                className="glass-card group relative flex h-full flex-col overflow-hidden rounded-3xl p-6 transition duration-300 hover:-translate-y-2 hover:border-sky-400/40"
+                className="glass-card group relative flex min-w-0 w-full flex-col overflow-hidden rounded-3xl p-5 transition duration-300 hover:-translate-y-2 hover:border-sky-400/40 sm:p-6"
               >
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-400 via-violet-400 to-emerald-400 opacity-0 transition group-hover:opacity-100" />
-
-                <p className="mb-4 text-sm font-semibold text-sky-400">
-                  {project.category}
-                </p>
-                <h3 className="text-2xl font-bold">{project.title}</h3>
-                <p className="mt-4 min-h-28 text-slate-300">
-                  {project.description}
-                </p>
-
-                <div className="mt-auto pt-6">
-                  <div className="flex min-h-24 flex-wrap content-start gap-2">
+                {" "}
+                {/* Top Gradient */}{" "}
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-400 via-violet-400 to-emerald-400 opacity-0 transition group-hover:opacity-100" />{" "}
+                {/* Category */}{" "}
+                <p className="mb-3 text-xs font-semibold text-sky-400 sm:mb-4 sm:text-sm">
+                  {" "}
+                  {project.category}{" "}
+                </p>{" "}
+                {/* Title */}{" "}
+                <h3 className="break-words text-xl font-bold leading-snug sm:text-2xl">
+                  {" "}
+                  {project.title}{" "}
+                </h3>{" "}
+                {/* Description */}{" "}
+                <p className="mt-3 break-words text-sm leading-6 text-slate-300 sm:mt-4 sm:text-base sm:leading-7">
+                  {" "}
+                  {project.description}{" "}
+                </p>{" "}
+                {/* Bottom Content */}{" "}
+                <div className="mt-6 flex flex-1 flex-col sm:mt-8">
+                  {" "}
+                  {/* Tech Stack */}{" "}
+                  <div className="flex flex-wrap content-start gap-2">
+                    {" "}
                     {project.stack.map((item) => (
                       <span
                         key={item}
-                        className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300 transition group-hover:border-sky-400/40"
+                        className="max-w-full break-words rounded-full border border-slate-700 px-2.5 py-1 text-[11px] text-slate-300 transition group-hover:border-sky-400/40 sm:px-3 sm:text-xs"
                       >
-                        {item}
+                        {" "}
+                        {item}{" "}
                       </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-8 flex min-h-10 flex-wrap items-center gap-3">
+                    ))}{" "}
+                  </div>{" "}
+                  {/* Buttons */}{" "}
+                  <div className="mt-6 flex flex-wrap gap-2 sm:mt-8 sm:gap-3">
+                    {" "}
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full border border-sky-400/40 px-4 py-2 text-sm font-semibold text-sky-300 transition duration-300 hover:border-sky-300 hover:bg-sky-400/10 hover:text-white"
+                        className="inline-flex items-center justify-center gap-2 rounded-full border border-sky-400/40 px-3 py-2 text-xs font-semibold text-sky-300 transition duration-300 hover:border-sky-300 hover:bg-sky-400/10 hover:text-white sm:px-4 sm:text-sm"
                       >
-                        Live Demo
-                        <ExternalLink size={15} />
+                        {" "}
+                        Live Demo <ExternalLink size={14} />{" "}
                       </a>
-                    )}
-
+                    )}{" "}
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-300 transition duration-300 hover:border-slate-400 hover:bg-white/5 hover:text-white"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 px-3 py-2 text-xs font-semibold text-slate-300 transition duration-300 hover:border-slate-400 hover:bg-white/5 hover:text-white sm:px-4 sm:text-sm"
                     >
-                      GitHub
-                      <FaGithub size={15} />
-                    </a>
-                  </div>
-                </div>
+                      {" "}
+                      GitHub <FaGithub size={14} />{" "}
+                    </a>{" "}
+                  </div>{" "}
+                </div>{" "}
               </motion.article>
-            ))}
-          </div>
-        </motion.div>
+            ))}{" "}
+          </div>{" "}
+        </motion.div>{" "}
       </section>
-
       {/* Achievements */}
       <section id="achievements" className="mx-auto max-w-7xl px-6 py-20">
         <motion.div
@@ -558,7 +575,6 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-
       {/* Skills */}
       <section id="skills" className="mx-auto max-w-7xl px-6 py-20">
         <motion.div
@@ -598,7 +614,6 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-
       {/* Contact */}
       <section id="contact" className="mx-auto max-w-7xl px-6 py-20">
         <motion.div
@@ -653,7 +668,6 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-
       <footer className="mx-auto max-w-7xl px-6 py-8 text-sm text-slate-500">
         © 2026 Wijaya Pratama. Built with Next.js, TypeScript, Tailwind CSS, and
         Motion.
