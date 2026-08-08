@@ -614,60 +614,83 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+      ```tsx
       {/* Contact */}
-      <section id="contact" className="mx-auto max-w-7xl px-6 py-20">
+      <section
+        id="contact"
+        className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 sm:py-20"
+      >
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
-          className="glass-card rounded-3xl p-8 md:p-12"
+          className="glass-card w-full overflow-hidden rounded-3xl p-5 sm:p-8 md:p-12"
         >
-          <div className="grid gap-10 md:grid-cols-[1fr_0.8fr]">
-            <div>
-              <p className="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-sky-400">
+          <div className="grid min-w-0 gap-8 md:grid-cols-[1fr_0.8fr] md:gap-10">
+            {/* Contact Description */}
+            <div className="min-w-0">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-sky-400 sm:text-sm sm:tracking-[0.3em]">
                 Contact
               </p>
-              <h2 className="text-4xl font-black tracking-tight md:text-5xl">
+
+              <h2 className="break-words text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl">
                 Let&apos;s build something useful.
               </h2>
-              <p className="mt-4 max-w-2xl text-slate-300">
+
+              <p className="mt-4 break-words text-sm leading-6 text-slate-300 sm:text-base sm:leading-7">
                 Saya terbuka untuk opportunity sebagai Web Developer, Data
                 Analyst, Data Scientist, atau role hybrid yang membutuhkan
                 kemampuan web dan data.
               </p>
             </div>
 
-            <div className="grid gap-4">
+            {/* Contact Links */}
+            <div className="grid min-w-0 gap-3 sm:gap-4">
+              {/* Email */}
               <a
                 href="mailto:pratamawijaya549@gmail.com"
-                className="flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-950/60 p-5 transition duration-300 hover:-translate-y-1 hover:border-sky-400"
+                className="flex min-w-0 w-full items-center gap-3 rounded-2xl border border-slate-800 bg-slate-950/60 p-4 transition duration-300 hover:-translate-y-1 hover:border-sky-400 sm:gap-4 sm:p-5"
               >
-                <Mail className="text-sky-400" />
-                <span>pratamawijaya549@gmail.com</span>
+                <Mail className="shrink-0 text-sky-400" size={22} />
+
+                <span className="min-w-0 break-all text-sm leading-5 text-slate-200 sm:text-base">
+                  pratamawijaya549@gmail.com
+                </span>
               </a>
 
+              {/* GitHub */}
               <a
                 href="https://github.com/WijayaPratama"
                 target="_blank"
-                className="flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-950/60 p-5 transition duration-300 hover:-translate-y-1 hover:border-sky-400"
+                rel="noopener noreferrer"
+                className="flex min-w-0 w-full items-center gap-3 rounded-2xl border border-slate-800 bg-slate-950/60 p-4 transition duration-300 hover:-translate-y-1 hover:border-sky-400 sm:gap-4 sm:p-5"
               >
-                <FaGithub className="text-sky-400" size={24} />
-                <span>GitHub Profile</span>
+                <FaGithub className="shrink-0 text-sky-400" size={22} />
+
+                <span className="min-w-0 break-words text-sm text-slate-200 sm:text-base">
+                  GitHub Profile
+                </span>
               </a>
 
+              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/wijaya-pratama-702068200/"
                 target="_blank"
-                className="flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-950/60 p-5 transition duration-300 hover:-translate-y-1 hover:border-sky-400"
+                rel="noopener noreferrer"
+                className="flex min-w-0 w-full items-center gap-3 rounded-2xl border border-slate-800 bg-slate-950/60 p-4 transition duration-300 hover:-translate-y-1 hover:border-sky-400 sm:gap-4 sm:p-5"
               >
-                <FaLinkedin className="text-sky-400" size={24} />
-                <span>LinkedIn Profile</span>
+                <FaLinkedin className="shrink-0 text-sky-400" size={22} />
+
+                <span className="min-w-0 break-words text-sm text-slate-200 sm:text-base">
+                  LinkedIn Profile
+                </span>
               </a>
             </div>
           </div>
         </motion.div>
       </section>
+      ```
       <footer className="mx-auto max-w-7xl px-6 py-8 text-sm text-slate-500">
         © 2026 Wijaya Pratama. Built with Next.js, TypeScript, Tailwind CSS, and
         Motion.
