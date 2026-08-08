@@ -614,7 +614,6 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-      ```tsx
       {/* Contact */}
       <section
         id="contact"
@@ -690,7 +689,6 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-      ```
       <footer className="mx-auto max-w-7xl px-6 py-8 text-sm text-slate-500">
         © 2026 Wijaya Pratama. Built with Next.js, TypeScript, Tailwind CSS, and
         Motion.
