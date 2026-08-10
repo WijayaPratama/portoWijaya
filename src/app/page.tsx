@@ -195,7 +195,7 @@ const aboutCards = [
     icon: GraduationCap,
     title: "Informatics Student",
     description:
-      "Mahasiswa S1 Informatika di Telkom University dengan IPK 3.73/4.00 dan fokus pada software engineering, data, dan AI.",
+      "Mahasiswa S1 Informatika di Telkom University dengan IPK 3.76/4.00 dan fokus pada software engineering, data, dan AI.",
   },
   {
     icon: Users,
