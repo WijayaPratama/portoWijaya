@@ -129,26 +129,22 @@ const projects = [
   },
 ];
 
-const skills = [
+const courses = [
   {
-    icon: Code2,
-    title: "Frontend",
-    items: "React, Next.js, Tailwind CSS, TypeScript, HTML, CSS",
+    title: "FullStack Web",
+    image: "/projects/assets/1.jpg",
   },
   {
-    icon: Server,
-    title: "Backend",
-    items: "API, Auth, PostgreSQL, Prisma, REST, Go",
+    title: "AI ENGINEER",
+    image: "/projects/assets/2.jpg",
   },
   {
-    icon: BarChart3,
-    title: "Data Analytics",
-    items: "SQL, Python, NumPy, Matplotlib, dashboarding",
+    title: "Data Analyst",
+    image: "/projects/assets/3.jpg",
   },
   {
-    icon: BrainCircuit,
-    title: "Machine Learning",
-    items: "AI fundamentals, model evaluation, feature engineering",
+    title: "Data Scientist",
+    image: "/projects/assets/4.jpg",
   },
 ];
 
@@ -195,19 +191,19 @@ const aboutCards = [
     icon: GraduationCap,
     title: "Informatics Student",
     description:
-      "Mahasiswa S1 Informatika di Telkom University dengan IPK 3.76/4.00 dan fokus pada software engineering, data, dan AI.",
+      "Undergraduate Informatics student at Telkom University with a GPA of 3.76/4.00, focusing on software development, data, and AI.",
   },
   {
     icon: Users,
     title: "Robotics Leadership",
     description:
-      "Ketua Divisi di Laboratorium Robotic SAS, memimpin perencanaan, pengembangan, dan pengujian robot bawah air.",
+      "Division Head at the SAS Robotics Laboratory, leading the planning, development, and testing of underwater robots.",
   },
   {
     icon: Briefcase,
     title: "Practical Web Experience",
     description:
-      "Pernah mengembangkan aplikasi administrasi berbasis web untuk otomasi Nota Debet, RAB, dan Invoice saat internship di BKI.",
+      "Developed a web-based administrative application to automate Debit Notes, Cost Estimates (RAB), and Invoices during an internship at BKI.",
   },
 ];
 
@@ -247,24 +243,24 @@ export default function Home() {
       <nav className="fixed left-0 top-0 z-50 w-full border-b border-slate-800/70 bg-slate-950/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <a href="#" className="text-lg font-bold tracking-tight">
-            Wijaya<span className="text-sky-400">.</span>
+            Wijaya Pratama<span className="text-sky-400">.</span>
           </a>
 
           <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
             <a href="#about" className="transition hover:text-white">
-              About
+              ABOUT
             </a>
             <a href="#projects" className="transition hover:text-white">
-              Projects
+              PROJECTS
             </a>
             <a href="#achievements" className="transition hover:text-white">
-              Achievements
+              ACHIEVEMENTS
             </a>
             <a href="#skills" className="transition hover:text-white">
-              Skills
+              SKILLS
             </a>
             <a href="#contact" className="transition hover:text-white">
-              Contact
+              CONTACT
             </a>
           </div>
 
@@ -284,24 +280,25 @@ export default function Home() {
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-sm text-sky-200"
           >
             <Sparkles size={16} />
-            Informatics Student · Web Developer · Data Enthusiast
+            Informatics Student · Web Developer · Data Analyst/Scientiest . AI
           </motion.div>
 
           <motion.h1
             variants={fadeUp}
-            className="max-w-4xl text-5xl font-black leading-tight tracking-tight md:text-7xl"
+            className="max-w-4xl text-4xl font-black leading-tight tracking-tight md:text-5xl"
           >
-            I build <span className="gradient-text">data-driven</span> web
-            applications with clean UI and practical impact.
+            I build{" "}
+            <span className="gradient-text">practical digital solutions</span>{" "}
+            by combining web development, data analysis, and problem-solving.
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
             className="mt-6 max-w-2xl text-lg leading-8 text-slate-300"
           >
-            Saya adalah mahasiswa S1 Informatika Telkom University yang fokus
-            pada Software Engineering, Data Science, dan pengembangan solusi web
-            yang bisa dipakai secara nyata.
+            I am an Informatics undergraduate student at Telkom University,
+            focusing on Software Engineering, Data Science/Analyst, and
+            Artificial intelligence.
           </motion.p>
 
           <motion.div
@@ -365,14 +362,22 @@ export default function Home() {
             </div>
 
             <div className="rounded-2xl border border-slate-800 bg-slate-950/60 p-5 transition hover:border-sky-400/40">
-              <p className="mb-2 text-sm text-slate-400">Main Stack</p>
-              <p className="font-semibold">Python, SQL, React, Tailwind</p>
+              <p className="mb-2 text-sm text-slate-400">Experience Work</p>
+              <p className="font-semibold">
+                Web Developer — CAATIS, Telkom University
+              </p>
+              <p className="mt-1 text-sm text-slate-400">
+                IT Support Intern — BKI
+              </p>
+              <p className="mt-1 text-sm text-slate-400">
+                Practicum Assistant — Informatics Lab, Telkom University
+              </p>
             </div>
 
             <div className="rounded-2xl border border-slate-800 bg-slate-950/60 p-5 transition hover:border-sky-400/40">
               <p className="mb-2 text-sm text-slate-400">Career Direction</p>
               <p className="font-semibold">
-                Software Engineering + Data Science
+                Software Development + Data Science/Analyst + AI
               </p>
             </div>
           </div>
@@ -391,12 +396,14 @@ export default function Home() {
               About Me
             </p>
             <h2 className="text-4xl font-black tracking-tight md:text-5xl">
-              I combine engineering, data, and competition mindset.
+              I enjoy learning new things about technology.
             </h2>
             <p className="mt-4 max-w-3xl text-slate-300">
-              Saya terbiasa bekerja dalam tim maupun mandiri, aktif mengikuti
-              kompetisi nasional dan internasional, serta punya pengalaman
-              memimpin tim teknis dalam proses riset dan pengembangan.
+              I’m an Informatics student passionate about building digital
+              solutions through Web Development, Data Analytics\Science and
+              Artificial intelligence. I enjoy transforming ideas and data into
+              practical applications while continuously learning and solving
+              real-world problems with technology.
             </p>
           </motion.div>
 
@@ -448,8 +455,8 @@ export default function Home() {
             </h2>{" "}
             <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300 sm:mt-4 sm:text-base sm:leading-7">
               {" "}
-              Project untuk menunjukkan kemampuan full-stack, data analytics,
-              dan integrasi machine learning ke dalam web app.{" "}
+              {/* Project untuk menunjukkan kemampuan full-stack, data analytics,
+              dan integrasi machine learning ke dalam web app.{" "} */}
             </p>{" "}
           </motion.div>{" "}
           {/* Project Grid */}{" "}
@@ -538,11 +545,11 @@ export default function Home() {
               Achievements
             </p>
             <h2 className="text-4xl font-black tracking-tight md:text-5xl">
-              Competition-proven performance.
+              Competition
             </h2>
             <p className="mt-4 max-w-3xl text-slate-300">
-              Achievement ini menunjukkan pengalaman kompetitif di bidang
-              robotika, kapal, teknologi, dan akademik kemahasiswaan.
+              {/* Achievement ini menunjukkan pengalaman kompetitif di bidang
+              robotika, kapal, teknologi, dan akademik kemahasiswaan. */}
             </p>
           </motion.div>
 
@@ -585,32 +592,38 @@ export default function Home() {
         >
           <motion.div variants={fadeUp} className="mb-10">
             <p className="mb-2 text-sm font-semibold uppercase tracking-[0.3em] text-violet-400">
-              Skills Matrix
+              COURSE
             </p>
             <h2 className="text-4xl font-black tracking-tight md:text-5xl">
-              What I Can Build
+              {/* What I Can Build */}
             </h2>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {skills.map((skill) => {
-              const Icon = skill.icon;
-
-              return (
-                <motion.div
-                  key={skill.title}
-                  variants={fadeUp}
-                  className="glass-card group rounded-3xl p-6 transition duration-300 hover:-translate-y-2 hover:border-violet-400/40"
-                >
-                  <Icon
-                    className="mb-5 text-violet-400 transition group-hover:scale-110"
-                    size={34}
+            {courses.map((course) => (
+              <motion.article
+                key={course.title}
+                variants={fadeUp}
+                className="glass-card group overflow-hidden rounded-3xl transition duration-300 hover:-translate-y-2 hover:border-violet-400/40"
+              >
+                {/* Course Image */}
+                <div className="relative aspect-video w-full overflow-hidden">
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
-                  <h3 className="text-2xl font-bold">{skill.title}</h3>
-                  <p className="mt-3 text-slate-300">{skill.items}</p>
-                </motion.div>
-              );
-            })}
+
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                </div>
+
+                {/* Course Content */}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold">{course.title}</h3>
+                </div>
+              </motion.article>
+            ))}
           </div>
         </motion.div>
       </section>
