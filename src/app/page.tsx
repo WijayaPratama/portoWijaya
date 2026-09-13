@@ -16,7 +16,7 @@ import {
   Trophy,
   Users,
 } from "lucide-react";
-
+import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const fadeUp: Variants = {
@@ -257,11 +257,14 @@ export default function Home() {
               ACHIEVEMENTS
             </a>
             <a href="#skills" className="transition hover:text-white">
-              SKILLS
+              COURSE
             </a>
             <a href="#contact" className="transition hover:text-white">
               CONTACT
             </a>
+            {/* <Link href="/BLG" className="transition hover:text-white">
+              BLOG
+            </Link> */}
           </div>
 
           <a
